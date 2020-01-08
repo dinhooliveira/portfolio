@@ -52,6 +52,7 @@ function changeLanguage(element) {
         element.innerText = lang.language.labelEducationalInstitution;
     });
     document.getElementById("description-course-1").innerText = lang.language.descriptionCourse1;
+    document.getElementById("description-course-2").innerText = lang.language.descriptionCourse2;
 }
 
 const cards = document.querySelectorAll(".card");
