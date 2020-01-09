@@ -109,7 +109,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.about{
+.experience{
     width: 100%;
     background: rgb(255, 255, 255);
     padding: 20px;
@@ -227,6 +227,10 @@ body {
         font-size: 25px;
         top:40px;
         left:22%
+    }
+
+    .card{
+        width: 100%;
     }
 
 
