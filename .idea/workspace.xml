@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e451583-ea52-43e9-9b1a-52d026231900" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="testeJs" />
@@ -69,7 +76,9 @@
       <option name="presentableId" value="Default" />
       <updated>1578417790898</updated>
       <workItem from="1578417793154" duration="33628000" />
-      <workItem from="1578514579457" duration="4413000" />
+      <workItem from="1578514579457" duration="4523000" />
+      <workItem from="1578573337739" duration="369000" />
+      <workItem from="1578573753994" duration="10893000" />
     </task>
     <servers />
   </component>

@@ -1,16 +1,11 @@
 import languages from './language.js';
 
 var language = 'pt-br';
-
-/**
- * Carrega as barras de acordo com data-percentual do HTML
- * @type {NodeListOf<Element>}
- */
 const skillsBarFill = document.querySelectorAll('.skills-bar-fill');
 skillsBarFill.forEach(function (element) {
     barLoading(element);
 });
-
+const schoolingDiv = document.getElementById("schooling");
 function barLoading(element) {
     const percentual = element.dataset.percentual;
     var i = 0;
@@ -24,7 +19,6 @@ function barLoading(element) {
         element.innerHTML = `${i}%`;
     }, 20);
 }
-
 const selectLanguage = document.createElement("select");
 languages.forEach(function (lang) {
     const option = document.createElement("option");
@@ -32,11 +26,8 @@ languages.forEach(function (lang) {
     option.innerText = lang.description;
     selectLanguage.appendChild(option);
 });
-
 document.getElementById("language").appendChild(selectLanguage);
-
 selectLanguage.addEventListener('change', (val) => changeLanguage(val.target.value));
-
 function changeLanguage(element) {
     language = element ? element : language;
     const lang = languages.find(function (obj) {
@@ -54,15 +45,14 @@ function changeLanguage(element) {
     document.getElementById("description-course-1").innerText = lang.language.descriptionCourse1;
     document.getElementById("description-course-2").innerText = lang.language.descriptionCourse2;
 }
-
 const cards = document.querySelectorAll(".card");
-
 function animateCards() {
+    const widthWindow = (window.screen.width - 100) / 2;
     cards.forEach(function (element, index) {
         if (index % 2 == 0) {
             element.animate([
                 // keyframes
-                {transform: 'translateX(-500px)'},
+                {transform: `translateX(-${widthWindow}px)`},
                 {transform: 'translateX(0px)'}
             ], {
                 // timing options
@@ -71,7 +61,7 @@ function animateCards() {
         } else {
             element.animate([
                 // keyframes
-                {transform: 'translateX(1000px)'},
+                {transform: `translateX(${widthWindow}px)`},
                 {transform: 'translateX(0px)'}
             ], {
                 // timing options
@@ -81,12 +71,13 @@ function animateCards() {
 
     });
 }
-
 var cardEnableEffect = true;
 window.addEventListener("scroll", function () {
-    if (this.scrollY > 500 && cardEnableEffect) {
+    if (this.scrollY > (schoolingDiv.offsetTop - 400) && cardEnableEffect) {
+        console.log(this.pageYOffset, schoolingDiv.offsetTop);
         cardEnableEffect = false;
         animateCards();
+        return;
     }
 });
 changeLanguage();
